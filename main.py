@@ -43,4 +43,4 @@ else:
         connection.sendmail(
             from_addr=MY_EMAIL,
             to_addrs="arektest@onet.pl",
-            msg=f"Hello\n\Have a nice day!")
+            msg="Subject:Hello\n\Have a nice day!")
