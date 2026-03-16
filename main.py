@@ -42,5 +42,5 @@ else:
         connection.login(MY_EMAIL, MY_PASSWORD)
         connection.sendmail(
             from_addr=MY_EMAIL,
-            to_addrs=birthday_person["email"],
+            to_addrs="arektest@onet.pl",
             msg=f"Hello\n\Have a nice day!")
