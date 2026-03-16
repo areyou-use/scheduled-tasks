@@ -28,7 +28,7 @@ if today_tuple in birthdays_dict:
         contents = letter_file.read()
         contents = contents.replace("[NAME]", birthday_person["name"])
 
-    with smtplib.SMTP("YOUR EMAIL PROVIDER SMTP SERVER ADDRESS") as connection:
+    with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(MY_EMAIL, MY_PASSWORD)
         connection.sendmail(
@@ -36,3 +36,11 @@ if today_tuple in birthdays_dict:
             to_addrs=birthday_person["email"],
             msg=f"Subject:Happy Birthday!\n\n{contents}"
         )
+else:
+    with smtplib.SMTP("smtp.gmail.com") as connection:
+        connection.starttls()
+        connection.login(MY_EMAIL, MY_PASSWORD)
+        connection.sendmail(
+            from_addr=MY_EMAIL,
+            to_addrs=birthday_person["email"],
+            msg=f"Hello\n\Have a nice day!"
