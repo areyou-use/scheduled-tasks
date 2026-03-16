@@ -43,4 +43,4 @@ else:
         connection.sendmail(
             from_addr=MY_EMAIL,
             to_addrs=birthday_person["email"],
-            msg=f"Hello\n\Have a nice day!"
+            msg=f"Hello\n\Have a nice day!")
