@@ -11,10 +11,10 @@ on:
     # ║    '0 9 * * *'   = 9:00 AM UTC daily                          ║
     # ║    '30 14 * * *' = 2:30 PM UTC daily                          ║
     # ║    '0 0 * * *'   = Midnight UTC daily                         ║
-    # ║                                                                ║
+    # ║    '*/5 * * * *'  = every 5 minutes                           ║
     # ║  Use https://time.is/UTC to find your local time in UTC       ║
     # ╚═══════════════════════════════════════════════════════════════╝
-    - cron: '45 21 * * *'
+    - cron: '*/5 * * * *'
 
   # This adds a "Run workflow" button so you can test manually
   workflow_dispatch:
